@@ -45,7 +45,7 @@ class JdApiGoodsSpread
     public function getApiParams()
     {
         return [
-            'goodsReq' => [
+            'promotionCodeReq' => [
                 'materialId' => $this->materialId,
                 'siteId'  => $this->siteId,
                 'couponUrl'  => $this->couponUrl

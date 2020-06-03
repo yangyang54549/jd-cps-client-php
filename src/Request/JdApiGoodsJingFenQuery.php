@@ -20,30 +20,6 @@ class JdApiGoodsJingFenQuery
     private $eliteId;
 
     /**
-     * 商品价格下限
-     * @var $pricefrom
-     */
-    private $pricefrom;
-
-    /**
-     * 商品价格上限
-     * @var $priceto
-     */
-    private $priceto;
-
-    /**
-     * 佣金比例区间开始
-     * @var $commissionShareStart
-     */
-    private $commissionShareStart;
-
-    /**
-     * 佣金比例区间结束
-     * @var $commissionShareEnd
-     */
-    private $commissionShareEnd;
-
-    /**
      * 排序字段(price：单价, commissionShare：佣金比例, commission：佣金， inOrderCount30DaysSku：sku维度30天引单量，comments：评论数，goodComments：好评数)
      * @var $sortName
      */
@@ -72,7 +48,7 @@ class JdApiGoodsJingFenQuery
         $this->pageSize = $pageSize;
     }
 
-    public function eliteId($eliteId)
+    public function setEliteId($eliteId)
     {
         $this->eliteId = $eliteId;
     }
