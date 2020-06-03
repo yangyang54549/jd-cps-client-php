@@ -15,7 +15,7 @@ $client = new Client($appkey, $secretkey);
 $request = new JdApiGoodsGetCategory();
 
 $request->setParentId(0);
-$request->setGrade(1);
+$request->setGrade(0);
 
 try {
     $result = $client->execute($request);

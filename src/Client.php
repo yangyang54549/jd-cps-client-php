@@ -17,7 +17,7 @@ class Client
 
     protected $signMethod = "md5";
 
-    protected $apiVersion = "2.0";
+    protected $apiVersion = "1.0";
 
     /**
      * Client constructor.
@@ -61,7 +61,7 @@ class Client
         $params = [
             'method' => $request->getApiMethodName(),
             'app_key' => $this->appkey,
-            'access_token' => $this->accessKoken,
+//            'access_token' => $this->accessKoken,
             'timestamp' => date('Y-m-d H:i:s'),
             'format' => $this->format,
             'v' => $this->apiVersion,
@@ -72,7 +72,6 @@ class Client
         $params["sign"] = $this->generateSign($params);
 
         $client = new HttpClient(['base_uri' => $this->gatewayUrl, 'query' => $params]);
-//        var_dump($client->get(''));die;
 
         return $client->get('')->getBody()->getContents();
     }
