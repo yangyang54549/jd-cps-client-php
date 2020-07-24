@@ -42,13 +42,19 @@ class JdApiGoodsSpread
         $this->couponUrl = $couponUrl;
     }
 
+    public function setExt1($ext1)
+    {
+        $this->ext1 = $ext1;
+    }
+
     public function getApiParams()
     {
         return [
             'promotionCodeReq' => [
                 'materialId' => $this->materialId,
                 'siteId'  => $this->siteId,
-                'couponUrl'  => $this->couponUrl
+                'couponUrl'  => $this->couponUrl,
+                'ext1'  => $this->ext1
             ]
         ];
     }
