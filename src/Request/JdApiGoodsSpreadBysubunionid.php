@@ -32,9 +32,9 @@ class JdApiGoodsSpreadBysubunionid
         $this->materialId = $materialId;
     }
 
-    public function setSiteId($siteId)
+    public function setSubUnionId($subUnionId)
     {
-        $this->siteId = $siteId;
+        $this->subUnionId = $subUnionId;
     }
 
     public function setCouponUrl($couponUrl)
