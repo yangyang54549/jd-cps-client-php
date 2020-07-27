@@ -41,7 +41,7 @@ class JdApiOrderQuery
     public function getApiParams()
     {
         return [
-            'goodsReqDTO' => [
+            'orderReq' => [
                 'pageNo' => $this->pageNo,
                 'pageSize' => $this->pageSize,
                 'type' => $this->type,
